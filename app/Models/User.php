@@ -32,6 +32,8 @@ class User extends Authenticatable
         'ip_address',
     ];
 
+
+
     /**
      * The attributes that should be hidden for serialization.
      *
@@ -50,4 +52,14 @@ class User extends Authenticatable
     protected $casts = [
         'email_verified_at' => 'datetime',
     ];
+
+    public function creator()
+    {
+        return $this->belongsTo(User::class, 'user_id');
+    }
+
+    public function registeredUsers()
+    {
+        return $this->hasMany(User::class, 'user_id');
+    }
 }
