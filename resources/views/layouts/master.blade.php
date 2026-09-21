@@ -8,8 +8,17 @@
     <meta name="description" content="" />
     <meta name="author" content="" />
     <title>@yield('title', 'Dashboard')</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
     <link href="{{ asset('css/simple-datatables.min.css') }}" rel="stylesheet" />
     <link href="{{ asset('css/styles.css') }}" rel="stylesheet" />
+    <style>
+        body {
+            font-family: 'Raleway', sans-serif !important;
+        }
+    </style>
     <script src="{{ asset('js/font-awesome-all.js') }}" crossorigin="anonymous"></script>
 </head>
 
